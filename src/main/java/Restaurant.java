@@ -16,6 +16,10 @@ public class Restaurant {
         this.closingTime = closingTime;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public boolean isRestaurantOpen() {
         LocalTime currentTime = getCurrentTime();
 
@@ -55,6 +59,10 @@ public class Restaurant {
         menu.remove(itemToBeRemoved);
     }
 
+    public int getTotalOrderValue(ArrayList<String> items) {
+        return 0;
+    }
+
     public void displayDetails() {
         System.out.println("Restaurant:" + name + "\n"
                 + "Location:" + location + "\n"
@@ -63,9 +71,4 @@ public class Restaurant {
                 + "Menu:" + "\n" + getMenu());
 
     }
-
-    public String getName() {
-        return name;
-    }
-
 }
