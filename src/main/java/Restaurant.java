@@ -60,7 +60,16 @@ public class Restaurant {
     }
 
     public int getTotalOrderValue(ArrayList<String> items) {
-        return 0;
+        int totalOrderValue = 0;
+
+        for (String itemName : items) {
+            Item item = findItemByName(itemName);
+
+            if (item != null)
+                totalOrderValue += item.getPrice();
+        }
+
+        return totalOrderValue;
     }
 
     public void displayDetails() {
